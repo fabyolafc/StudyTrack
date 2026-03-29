@@ -1,0 +1,159 @@
+.dashboard {
+  min-height: 100vh;
+  background: #f1f5f9;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.header-left {
+  display: flex;
+  gap: 10px;
+}
+
+.user-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.logout {
+  background: #ef4444;
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* GRÁFICO */
+.chart-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.chart-card {
+  width: 90%;
+  max-width: 900px;
+  color: #111827;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* CARDS */
+.card {
+  width: 320px;
+  background: white;
+  color: #111827;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.meta-card,
+.estudo-card {
+  background: white;
+  color: #111827;
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+/* INPUT */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+}
+
+/* BOTÕES */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.btn-green {
+  background: #22c55e;
+  color: white;
+}
+
+.btn-blue {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn-red {
+  background: #ef4444;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #475569;
+  background: #f8fafc;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.icon-button:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.icon-button.icon-edit {
+  color: #2563eb;
+}
+
+.icon-button.icon-delete {
+  color: #dc2626;
+}
