@@ -27,6 +27,7 @@ export const swaggerDocument = {
         type: "object",
         properties: {
           id: { type: "integer", example: 1 },
+          nome: { type: "string", example: "Fabyola Campos" },
           email: { type: "string", example: "usuario@example.com" },
           password: { type: "string", example: "$2a$08$abc123..." },
         },
@@ -118,8 +119,9 @@ export const swaggerDocument = {
             "application/json": {
               schema: {
                 type: "object",
-                required: ["email", "password"],
+                required: ["nome", "email", "password"],
                 properties: {
+                  nome: { type: "string", example: "Fabyola Campos" },
                   email: { type: "string", example: "usuario@example.com" },
                   password: { type: "string", example: "senha123" },
                 },
