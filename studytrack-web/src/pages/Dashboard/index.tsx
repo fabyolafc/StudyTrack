@@ -18,6 +18,9 @@ import Chart from "../../components/Chart";
 import {
   FaSignOutAlt,
   FaPlus,
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
 } from "react-icons/fa";
 
 import type { Estudo, Meta } from "../../types";
@@ -267,6 +270,21 @@ export default function Dashboard() {
           ))}
         </div>
       </div>
+
+      <footer className="dashboard-footer">
+        <span>Desenvolvido por &copy; Fabyola Campos</span>
+        <div className="social-links">
+          <a href="https://www.linkedin.com/in/fabyola-campos" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <FaLinkedin />
+          </a>
+          <a href="https://github.com/fabyolafc" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <FaGithub />
+          </a>
+          <a href="https://www.instagram.com/fabyolacampos" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <FaInstagram />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }

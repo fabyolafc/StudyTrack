@@ -142,6 +142,50 @@ select {
   opacity: 0.9;
 }
 
+.dashboard-footer {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.dashboard-footer span {
+  color: #475569;
+  font-weight: 600;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #22c55e;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.social-links svg {
+  width: 20px;
+  height: 20px;
+}
+
 .card-actions {
   display: flex;
   gap: 10px;
@@ -217,7 +261,14 @@ select {
 
   .grid {
     flex-direction: column;
+    align-items: center;
     gap: 18px;
+  }
+
+  .dashboard-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 

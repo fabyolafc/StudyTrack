@@ -1,0 +1,26 @@
+.app-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  background: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.app-footer a {
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+}
+
+.app-footer a:hover {
+  color: #0073e6;
+}
+
+.app-footer svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
