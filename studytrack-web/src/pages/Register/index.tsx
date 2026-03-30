@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { register } from "../../services/api";
-import "../login/styles.css";
+import "../Login/styles.css";
 
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 
