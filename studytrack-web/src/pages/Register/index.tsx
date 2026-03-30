@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { register } from "../../services/api";
 import "../Login/styles.css";
@@ -64,7 +64,7 @@ export default function Register() {
         <button onClick={handleRegister}>Cadastrar</button>
 
         <p>
-          Já tem conta? <a href="/">Login</a>
+          Já tem conta? <Link to="/">Login</Link>
         </p>
       </div>
     </div>

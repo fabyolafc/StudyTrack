@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { login } from "../../services/api";
 import "./styles.css";
@@ -65,7 +65,7 @@ export default function Login() {
         <button onClick={handleLogin}>Entrar</button>
 
         <p>
-          Não tem conta? <a href="/register">Cadastrar</a>
+          Não tem conta? <Link to="/register">Cadastrar</Link>
         </p>
       </div>
     </div>
