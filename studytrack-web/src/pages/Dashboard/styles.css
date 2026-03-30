@@ -16,14 +16,28 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+.img-principal {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.img-principal img {
+  width: min(100%, 420px);
+  height: auto;
+  padding: 20px;
+}
+
 .header-left {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
 .user-info {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   align-items: center;
 }
 
@@ -34,6 +48,10 @@
   color: white;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 15px;
 }
 
 /* GRÁFICO */
@@ -62,7 +80,7 @@
 
 /* CARDS */
 .card {
-  width: 320px;
+  width: min(100%, 320px);
   background: white;
   color: #111827;
   padding: 20px;
@@ -156,4 +174,86 @@ select {
 
 .icon-button.icon-delete {
   color: #dc2626;
+}
+
+@media (max-width: 1024px) {
+  .dashboard {
+    padding: 16px;
+  }
+
+  .chart-card {
+    width: 100%;
+    max-width: 900px;
+  }
+
+  .grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .header-left,
+  .user-info {
+    width: 100%;
+  }
+
+  .user-info {
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .chart-card {
+    padding: 20px;
+  }
+
+  .img-principal {
+    margin: 16px 0;
+  }
+
+  .grid {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 14px 12px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px;
+  }
+
+  .chart-card {
+    padding: 18px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 18px;
+  }
+
+  input,
+  select {
+    padding: 10px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .logout {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
 }

@@ -1,7 +1,7 @@
 import { Navigate } from "react-router-dom";
 
 interface Props {
-  children: JSX.Element;
+  children: React.ReactNode;
 }
 
 export default function PrivateRoute({ children }: Props) {

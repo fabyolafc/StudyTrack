@@ -16,7 +16,6 @@ import EstudoCard from "../../components/EstudoCard";
 import Chart from "../../components/Chart";
 
 import {
-  FaUserCircle,
   FaSignOutAlt,
   FaPlus,
 } from "react-icons/fa";
@@ -175,7 +174,8 @@ export default function Dashboard() {
         </div>
 
         <div className="user-info">
-          Olá,<span>{user?.nome || user?.email}</span> <button className="logout" onClick={logout}>
+          Olá,<span>{user?.nome || user?.email}</span> 
+          <button className="logout" onClick={logout}>
             <FaSignOutAlt />
             Sair
           </button>
@@ -188,6 +188,10 @@ export default function Dashboard() {
           <h2>📈 Progresso</h2>
           <Chart metas={metas} estudos={estudos} />
         </div>
+      </div>
+
+       <div className="img-principal">
+        <img src="/meta.png" alt="Imagem de pessoas em cima de um seta" />
       </div>
 
       {/* GRID */}

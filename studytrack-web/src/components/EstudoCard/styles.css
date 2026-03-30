@@ -6,3 +6,14 @@
   margin: 5px 0;
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
 }
+
+.estudo-card .card-actions {
+  align-items: center;
+}
+
+.estudo-card-date {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-right: auto;
+  white-space: nowrap;
+}

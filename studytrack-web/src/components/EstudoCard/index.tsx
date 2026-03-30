@@ -14,6 +14,13 @@ export default function EstudoCard({ estudo, onDelete, onUpdate }: Props) {
   const [horas, setHoras] = useState(estudo.horas);
   const descricaoRef = useRef<HTMLInputElement>(null);
 
+  const formattedDate = estudo.data
+    ? new Date(estudo.data).toLocaleString("pt-BR", {
+        dateStyle: "short",
+        timeStyle: "short",
+      })
+    : "";
+
   const handleUpdate = () => {
     onUpdate(estudo.id, {
       ...estudo,
@@ -37,6 +44,7 @@ export default function EstudoCard({ estudo, onDelete, onUpdate }: Props) {
       />
 
       <div className="card-actions">
+        <span className="estudo-card-date">{formattedDate}</span>
         <button
           type="button"
           className="icon-button icon-edit"

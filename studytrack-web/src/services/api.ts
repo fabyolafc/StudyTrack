@@ -304,7 +304,7 @@ export const getEstudos = async (): Promise<Estudo[]> => {
     return res.json();
   } catch {
     return getLocalItemsForUser<LocalEstudo>(LOCAL_ESTUDOS_KEY, token).map(
-      ({ id, descricao, horas, metaId }) => ({ id, descricao, horas, metaId }),
+      ({ id, descricao, horas, metaId, data }) => ({ id, descricao, horas, metaId, data }),
     );
   }
 };
@@ -327,7 +327,10 @@ export const createEstudo = async (data: {
 
     return res.json();
   } catch {
-    return addLocalItemForUser<LocalEstudo>(LOCAL_ESTUDOS_KEY, token, data);
+    return addLocalItemForUser<LocalEstudo>(LOCAL_ESTUDOS_KEY, token, {
+      ...data,
+      data: new Date().toISOString(),
+    });
   }
 };
 

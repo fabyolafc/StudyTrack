@@ -21,4 +21,5 @@ export interface Estudo {
   descricao?: string;
   horas: number;
   metaId: number;
+  data: string;
 }
