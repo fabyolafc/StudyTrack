@@ -6,7 +6,7 @@
 
 ## 🚀 Deploy
 
-- 🌐 **Frontend:** https://studytrack-web.vercel.app  
+- 🌐 **Frontend:** https://study-trackk.vercel.app  
 - 🔗 **API:** https://studytrackapi.onrender.com  
 - 📄 **Swagger:** https://studytrackapi.onrender.com/api-docs  
 
