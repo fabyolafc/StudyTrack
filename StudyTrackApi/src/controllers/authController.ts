@@ -1,21 +1,30 @@
 import { Request, Response } from "express";
 import { prisma } from "../prisma";
+import { Prisma } from "@prisma/client";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 export const register = async (req: Request, res: Response) => {
-  const {nome, email, password } = req.body;
+  const { nome, email, password } = req.body;
 
   const hash = await bcrypt.hash(password, 8);
 
   try {
     const user = await prisma.user.create({
-      data: {nome, email, password: hash }
+      data: { nome, email, password: hash },
     });
 
     res.json(user);
-  } catch {
-    res.status(400).json({ error: "Email já existe" });
+  } catch (error: unknown) {
+    if (
+      error instanceof Prisma.PrismaClientKnownRequestError &&
+      error.code === "P2002"
+    ) {
+      return res.status(400).json({ error: "Erro no cadastro" });
+    }
+
+    console.error("Register error:", error);
+    res.status(500).json({ error: "Erro interno do servidor" });
   }
 };
 
