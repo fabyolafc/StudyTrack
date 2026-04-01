@@ -1,6 +1,6 @@
 import type { AuthResponse, Estudo, Meta } from "../types";
 
-const API_URL = "http://localhost:3000";
+const API_URL = "https://studytrackapi.onrender.com";
 
 const getToken = () => localStorage.getItem("token")?.trim() ?? "";
 
