@@ -124,6 +124,7 @@ export default function Dashboard() {
       toast.success("Estudo criado com sucesso!");
       setDescricao("");
       setHoras(0);
+      setMetaId(0);
       loadData();
     } catch (error: unknown) {
       toast.error(
@@ -185,16 +186,33 @@ export default function Dashboard() {
         </div>
       </div>
 
+      <div className="hero-section">
+        <div className="hero-text">
+          <h1>Transforme metas em conquistas 🚀</h1>
+          <p>
+            O <strong>StudyTrack</strong> foi desenvolvido para ajudar estudantes a
+            organizarem suas metas de estudo, acompanharem horas dedicadas e
+            visualizarem seu progresso de forma simples e intuitiva.
+            <br /><br />
+            Defina objetivos, registre sessões de estudo e acompanhe sua evolução
+            através de gráficos inteligentes para manter sua produtividade sempre em alta.
+          </p>
+        </div>
+
+        <div className="hero-image">
+          <img
+            src="/meta.png"
+            alt="Pessoas comemorando metas alcançadas"
+          />
+        </div>
+      </div>
+
       {/* GRÁFICO */}
       <div className="chart-container">
         <div className="chart-card">
           <h2>📈 Progresso</h2>
           <Chart metas={metas} estudos={estudos} />
         </div>
-      </div>
-
-       <div className="img-principal">
-        <img src="/meta.png" alt="Imagem de pessoas em cima de um seta" />
       </div>
 
       {/* GRID */}
@@ -212,8 +230,8 @@ export default function Dashboard() {
           <input
             type="number"
             placeholder="Horas"
-            value={horasMeta}
-            onChange={(e) => setHorasMeta(Number(e.target.value))}
+            value={horasMeta === 0 ? "" : horasMeta}
+            onChange={(e) => setHorasMeta(e.target.value === "" ? 0 : Number(e.target.value))}
           />
 
           <button className="btn btn-green" onClick={handleCreateMeta}>
@@ -243,11 +261,11 @@ export default function Dashboard() {
           <input
             type="number"
             placeholder="Horas"
-            value={horas}
-            onChange={(e) => setHoras(Number(e.target.value))}
+            value={horas === 0 ? "" : horas}
+            onChange={(e) => setHoras(e.target.value === "" ? 0 : Number(e.target.value))}
           />
 
-          <select onChange={(e) => setMetaId(Number(e.target.value))}>
+          <select value={metaId} onChange={(e) => setMetaId(Number(e.target.value))}>
             <option value={0}>Selecione uma meta</option>
             {metas.map((meta) => (
               <option key={meta.id} value={meta.id}>
